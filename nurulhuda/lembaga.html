@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Akademik - Nurul Huda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p.subtext {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* Program Cards */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #4CAF50;
+      overflow: hidden;
+    }
+
+    .icon img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .subjects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .subject {
+      background: #f2f2f2;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    /* Ekstrakurikuler */
+    .extracurricular {
+      background: linear-gradient(90deg, #1E3A8A, #1E40AF);
+      padding: 50px 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      margin-top: 60px;
+    }
+
+    .extracurricular h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .extra-item {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .extra-item:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <section id="programs">
+    <div class="container">
+      <h2>Program Akademik</h2>
+      <p class="subtext">
+        Lima jurusan unggulan yang dirancang untuk mengembangkan potensi siswa sesuai minat dan bakat
+      </p>
+
+      <div class="programs">
+        <!-- SMP -->
+        <div class="card">
+          <div class="icon" style="background:#4CAF50;">
+            <img src="logo.png" alt="Logo SMP">
+          </div>
+          <h3>SMP NURUL HUDA</h3>
+          <p>Program yang mengembangkan pemahaman mendalam tentang IT dan kecerdasan buatan.</p>
+          <div class="subjects">
+            <span class="subject">TIK</span>
+            <span class="subject">Bahasa Indonesia</span>
+            <span class="subject">Matematika</span>
+            <span class="subject">Kecerdasan Buatan</span>
+          </div>
+        </div>
+
+        <!-- SMA -->
+        <div class="card">
+          <div class="icon" style="background:#2196F3;">
+            <img src="logo.png" alt="Logo SMA">
+          </div>
+          <h3>SMA NURUL HUDA</h3>
+          <p>Program yang mengembangkan tentang Ilmu Pengetahuan Alam dan Ilmu Pengetahuan Sosial.</p>
+          <div class="subjects">
+            <span class="subject">IPA</span>
+            <span class="subject">IPS</span>
+           
+          </div>
+        </div>
+
+        <!-- Madrasah Diniyah -->
+        <div class="card">
+          <div class="icon" style="background:#9C27B0;">
+             <img src="logo.png" alt="Logo SMA">
+          </div>
+          <h3>MADRASAH DINIYAH</h3>
+          <p>Program yang fokus pada pemahaman kitab salaf.</p>
+          <div class="subjects">
+            <span class="subject">Fiqih</span>
+            <span class="subject">Aqidah</span>
+            <span class="subject">Akhlak</span>
+            <span class="subject">tafsir</span>
+            <span class="subject">nahwu</span>
+            <span class="subject">ushul</span>
+          </div>
+        </div>
+
+        <!-- TPQ -->
+        <div class="card">
+          <div class="icon" style="background:#3F51B5;">
+             <img src="logo.png" alt="Logo SMA">
+          </div>
+          <h3>LPQ (Lembaga Pendidikan Al-Qur’an)</h3>
+          <p>Program yang fokus pada tahsin dan tahfid</p>
+          <div class="subjects">
+            <span class="subject">Al-Qur’an</span>
+          </div>
+        </div>
+
+        <!-- PKBM -->
+        <div class="card">
+          <div class="icon" style="background:#E91E63;"> <img src="logo.png" alt="Logo SMA"></div>
+          <h3>PKBM (Sekolah Paket)</h3>
+          <p>Program untuk orang yang ingin melanjutkan sekolah dan memiliki ijazah resmi.</p>
+          <div class="subjects">
+            <span class="subject">Setara SD</span>
+            <span class="subject">Setara SMP</span>
+            <span class="subject">Setara SMA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ekstrakurikuler -->
+      <div class="extracurricular">
+        <h3>Ekstrakurikuler</h3>
+        <div class="extra-grid">
+          <div class="extra-item">English Club</div>
+          <div class="extra-item">Tata Busana</div>
+          <div class="extra-item">Pramuka</div>
+          <div class="extra-item">Pers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami - Pondok Pesantren Nurul Huda</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #1e293b;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Grid Layout */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contact Info */
+    .contact-info {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .contact-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #1e293b;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .info-item h4 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #111827;
+    }
+
+    .info-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      padding: 12px;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon.blue { background: #1d4ed8; }
+    .icon.green { background: #16a34a; }
+    .icon.yellow { background: #f59e0b; }
+    .icon.purple { background: #7c3aed; }
+
+    /* Social Media */
+    .social-box {
+      background: linear-gradient(135deg, hsl(225, 8%, 90%), #1e40af);
+      padding: 25px;
+      border-radius: 12px;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .social-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .social-btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .social-btn.whatsapp { background: #25d366; }
+    .social-btn.email { background: #fbbc05; }
+    .social-btn.phone { background: #34b7f1; }
+
+    .social-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+
+    /* Maps */
+    .maps {
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .maps iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hubungi Kami</h2>
+        <p>Kami siap membantu Anda dengan informasi lebih lanjut tentang Pondok Pesantren Nurul Huda</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Informasi Kontak -->
+        <div class="contact-info">
+          <h3>Informasi Kontak</h3>
+
+          <div class="info-item">
+            <div class="icon blue">📍</div>
+            <div>
+              <h4>Alamat</h4>
+              <p>Jl. Masjid Nurul Huda No.4 RT 06 RW 02, Kedungboto, Porong, Sidoarjo</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon green">📞</div>
+            <div>
+              <h4>Telepon</h4>
+              <p>+62 8523-2628-299 (WhatsApp)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon yellow">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>pondokpesantrennurulhudaporong@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon purple">⏰</div>
+            <div>
+              <h4>Jam Operasional</h4>
+              <p>07:00 - 12:00 WIB</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media Sosial -->
+        <div class="social-box">
+          <h3>Media Sosial</h3>
+          <div class="social-links">
+            <a href="https://wa.me/6285232628299" target="_blank" class="social-btn whatsapp">💬 WhatsApp</a>
+            <a href="mailto:pondokpesantrennurulhudaporong@gmail.com" class="social-btn email">📧 Email</a>
+            <a href="tel:+6285232628299" class="social-btn phone">📞 Telepon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="maps">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.732607093374!2d112.705!3d-7.518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb7b9a7bb9c7%3A0xfcd9eeb3b6e6f8a3!2sPondok%20Pesantren%20Nurul%20Huda%20Porong!5e0!3m2!1sid!2sid!4v1695577339000!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
