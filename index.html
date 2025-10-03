@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nurul huda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: whitesmoke;
+      color: black;
+      padding: 10px 20px;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* jarak antara logo dan teks */
+}
+
+.logo-img {
+  width: 40px;   /* ukuran logo */
+  height: 40px;  /* bisa diubah sesuai kebutuhan */
+  object-fit: contain;
+}
+
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar ul li {
+      margin: 0 10px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .navbar ul li a:hover {
+      color: #00ff4c;
+    }
+
+    .navbar ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #007b5e;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      min-width: 160px;
+      z-index: 1000;
+    }
+
+    .navbar ul li:hover > ul {
+      display: block;
+    }
+
+    .navbar ul li ul li a {
+      padding: 10px;
+      color: white;
+    }
+
+    .navbar ul li ul li a:hover {
+      background-color: #00b377;
+    }
+
+    /* Mode toggle */
+    .mode-toggle {
+      cursor: pointer;
+      background-color: #ffffff;
+      color: #007b5e;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Tentang (Sejarah dengan background) */
+    #about {
+      position: relative;
+      background: url("sejarah.jpg") no-repeat center center/cover;
+    }
+    #about::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.7);
+      z-index: 1;
+    }
+    #about .container {
+      position: relative;
+      z-index: 2;
+    }
+    .grid-2 {
+      display: grid;
+      gap: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+    .image-box img {
+      border-radius: 20px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    }
+    .content-box h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .content-box p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+
+    /* Visi Misi Tujuan */
+    .grid-3 {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .blue { background: #1d4ed8; }
+    .amber { background: #f59e0b; }
+    .green { background: #16a34a; }
+
+
+    /* Slider */
+    .slider {
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 550px;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .slider-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .slider-text h1 {
+      font-size: 3rem;
+      color: #ffcc00;
+    }
+
+    .slider-text p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Tombol navigasi slider */
+    .slider button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+    
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+  <img src="logo.png" alt="Logo" class="logo-img">
+  <h1>ponpes nurul huda</h1>
+</div>
+
+    <div class="navbar-center">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="fasilitas.html">fasilitas</a></li>
+        <li><a href="dewan pembina.html">dewan pembina</a></li>
+        <li>
+          <a href="lembaga.html">Lembaga</a>
+        
+        </li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="kontak.html">kontak</a></li>
+        <li><a href="daftar.html">pendaftaran</a></li>
+      </ul>
+    </div>
+
+    
+  </div>
+
+  <!-- Slider -->
+  <div class="slider">
+    <img src="komplek.jpg" class="active" alt="Image 1">
+    <img src="halaman.jpg" alt="Image 2">
+    <img src="lapangan.jpg" alt="Image 3">
+   
+
+    <!-- Tombol navigasi -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <div class="slider-text">
+      <h1>santri enha</h1>
+      <p>ngaji sampek mati.</p>
+    </div>
+  </div>
+
+ 
+
+    <!-- Quotes Section -->
+  <section id="quotes" style="background:#1d4ed8; color:white; padding:100px 20px; text-align:center;">
+    <div class="container">
+      <i class="fa-solid fa-quote-left" style="font-size:2rem; opacity:0.8;"></i>
+      <p style="font-size:1.5rem; font-weight:500; max-width:800px; margin:20px auto;">
+        "Ilmu tanpa amal bagaikan pohon tanpa buah. Amal tanpa ilmu bagaikan jalan tanpa petunjuk."
+      </p>
+      <h4 style="margin-top:20px; font-weight:700;">KH. Syamsul Huda Ma'shum</h4>
+    </div>
+  </section>
+
+ <!-- Video Section -->
+<section id="video" style="padding:100px 20px; background:#f9fafb;">
+  <div class="container" style="text-align:center; max-width:1200px; margin:auto;">
+    <h2 style="font-size:2rem; margin-bottom:20px;">Video Kegiatan Santri</h2>
+    <p style="margin-bottom:40px; color:#4b5563;">
+      Dokumentasi kegiatan sehari-hari para santri Pondok Pesantren Nurul Huda.
+    </p>
+
+    <!-- Grid Video -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    ">
+      <!-- Video 1 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:15px; box-shadow:0 8px 16px rgba(0,0,0,0.15);">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID1"
+                title="Video Santri 1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+
+      <!-- Video 2 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:15px; box-shadow:0 8px 16px rgba(0,0,0,0.15);">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID2"
+                title="Video Santri 2"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+
+      <!-- Video 3 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:15px; box-shadow:0 8px 16px rgba(0,0,0,0.15);">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID3"
+                title="Video Santri 3"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Kalau pakai file lokal -->
+      <!--
+      <video controls style="max-width:100%; border-radius:20px; margin-top:30px;">
+        <source src="profil-pondok.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+      </video>
+      -->
+    </div>
+  </section>
+
+
+<!-- Footer -->
+  <footer id="kontak">
+    <p>&copy; 2025 Pondok Pesantren Nurul Huda</p>
+    <p><i class="fa-solid fa-phone"></i> +62 812-3456-7890 | <i class="fa-solid fa-envelope"></i> info@nurulhuda.ac.id</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.slider img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      showImage(currentIndex);
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      showImage(currentIndex);
+    });
+
+   
+  </script>
+</body>
+</html>
