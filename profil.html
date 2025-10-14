@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Pondok Pesantren Nurul Huda</title>
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #f9fafb, #eff6ff);
+      color: #1f2937;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      position: relative; /* penting supaya gambar bisa ditempatkan absolut */
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      position: relative; /* supaya bisa taruh gambar dekorasi */
+    }
+
+    @media (min-width: 1024px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    }
+
+    .content-box {
+      position: relative; /* supaya teks tetap di atas */
+      z-index: 2;
+    }
+
+    .content-box h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .content-box p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      color: #ffffff;
+    }
+
+    /* Gambar dekorasi transparan */
+    .dekorasi-sejarah {
+      position: absolute;
+      top: 20px;
+      right: 3px;
+      width: 580px;
+      opacity: 0,3; /* transparan */
+      z-index: 1; /* biar di belakang teks */
+    }
+
+    /* Card Section */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* Warna ikon */
+    .blue { background: #1d4ed8; }
+    .amber { background: #f59e0b; }
+    .green { background: #16a34a; }
+  </style>
+</head>
+<body>
+
+  <section id="about">
+    <div class="container">
+      <h2>Tentang Pondok Pesantren Nurul Huda</h2>
+
+      <!-- Bagian Sejarah -->
+      <div class="grid-2">
+        <div class="image-box">
+          <img src="pendiri.png" alt="Pendiri pondok pesantren nurul huda">
+        </div>
+        <div class="content-box">
+          <h3>Sejarah dan Komitmen Kami</h3>
+          <h4> Didirikan pada tahun 1991 oleh KH. Syamsul Huda Ma'shum Lc., M.Sy.</h4>
+
+          <p>
+            Berdirinya Pondok Pesantren Nurul Huda tidak lepas dari keinginan masyarakat serta atas saran dari KH. Anas Al Ayyuby, yang merupakan mertuanya sendiri.
+            Pada awal perkembangannya pondok pesantren Nurul Huda lebih fokus pada pendidikan dan pendalaman ilmu agama saja. 
+            Namun seiring berjalannya waktu dalam rangka merespon keinginan masyarakat, kemudian Pondok Pesantren Nurul Huda mendirikan unit pendidikan formal berupa SMP 
+            yang pada waktu itu dibantu perumusannya oleh Ir. KH. Sholahuddin Wahid (Alm), Prof. Dr. Muh. Nuh, dan Prof. Mukhlas Samani, lalu berlanjut mendirikan SMA.
+          </p>
+        </div>
+
+        <!-- Tambah gambar dekorasi transparan -->
+        <img src="halaman.jpg" alt="gambar dekorasi sejarah" class="dekorasi-sejarah">
+      </div>
+
+      <!-- Visi Misi Tujuan -->
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon-box blue">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3>Visi</h3>
+          <p>Mencetak insan yang bertaqwa, berilmu, beramal, dan berakhlaqul karimah.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box amber">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>Misi</h3>
+          <p>Menyelenggarakan pendidikan yang berbasis pada nilai-nilai agama serta pengembangan potensi anak didik melalui bakat dan minat.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box green">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Tujuan</h3>
+          <p>
+            1. Mengembangkan proses pembelajaran yang efektif, efisien, dan bermanfaat bagi kehidupan anak didik. <br><br>
+            2. Mengembangkan potensi anak didik dalam ilmu pengetahuan, teknologi, dan bahasa. <br><br>
+            3. Menghasilkan lulusan yang berkualitas, mandiri, kreatif, dan berakhlak karimah.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

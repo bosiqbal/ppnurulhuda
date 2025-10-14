@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Berita Sekolah</title>
+</head>
+<body>
+  <h2>Berita Terbaru</h2>
+  <div id="list-berita"></div>
+
+  <script>
+    fetch("http://localhost/backend/berita.php")
+      .then(res => res.json())
+      .then(data => {
+        let container = document.getElementById("list-berita");
+        data.forEach(b => {
+          container.innerHTML += `<h3>${b.judul}</h3><p>${b.isi}</p><small>${b.tanggal}</small><hr>`;
+        });
+      });
+  </script>
+</body>
+</html>

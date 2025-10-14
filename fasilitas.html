@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fasilitas Pondok Pesantren Nurul Huda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    p.section-desc {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4B5563;
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .facility-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #f1f1f1;
+    }
+
+    .facility-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .facility-img {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .facility-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .facility-card:hover .facility-img img {
+      transform: scale(1.1);
+    }
+
+    .facility-content {
+      padding: 20px;
+    }
+
+    .facility-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .facility-desc {
+      font-size: 1rem;
+      color: #4B5563;
+    }
+
+    /* Info tambahan */
+    .extra-info {
+      margin-top: 80px;
+      background: linear-gradient(to right, #FEF3C7, #FDE68A);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .extra-info h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .extra-info p {
+      font-size: 1.1rem;
+      color: #374151;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1D4ED8;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #4B5563;
+    }
+  </style>
+</head>
+<body>
+  <section id="facilities">
+    <h2>Fasilitas Modern</h2>
+    <p class="section-desc">
+      Fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang optimal
+    </p>
+
+    <div class="facilities-grid">
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="LAB.jpg" alt="Laboratorium Komputer">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Laboratorium Komputer</div>
+          <p class="facility-desc">Lab komputer modern dengan 20 unit PC dan akses internet high-speed</p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="perpus.jpeg" alt="Perpustakaan">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Perpustakaan</div>
+          <p class="facility-desc">Lab Fisika, Kimia, dan Biologi dengan peralatan lengkap dan modern</p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="lapangan.jpg" alt="Fasilitas Olahraga">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Fasilitas Olahraga</div>
+          <p class="facility-desc">Lapangan basket, voli, futsal</p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="kantin1.jpeg" alt="Kantin">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Kantin</div>
+          <p class="facility-desc">Kantin bersih dengan menu sehat dan halal untuk siswa</p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="musola.jpg" alt="Mushollah">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Mushollah</div>
+          <p class="facility-desc">Mushollah yang bersih dan terjaga</p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <div class="facility-img">
+          <img src="halaman.jpg" alt="Parkir Luas">
+        </div>
+        <div class="facility-content">
+          <div class="facility-title">Parkir Luas</div>
+          <p class="facility-desc">Area parkir yang aman dan luas untuk santri dan staff</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-info">
+      <h3>Lingkungan Belajar yang Kondusif</h3>
+      <p>
+        Setiap fasilitas dirancang untuk menciptakan lingkungan belajar yang nyaman, aman, dan mendukung pengembangan akademik maupun non-akademik santri.
+      </p>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Ruang Kelas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Perpustakaan</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Lapangan Olahraga</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Mushollah</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

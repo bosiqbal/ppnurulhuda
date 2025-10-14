@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengurus & Kepala Sekolah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    p.section-desc {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4B5563;
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .faculty-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .faculty-img {
+      position: relative;
+      height: 200px;
+      background: #e5e7eb;
+    }
+
+    .faculty-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .faculty-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .faculty-info h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 5px;
+    }
+
+    .faculty-info p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1D4ED8;
+    }
+  </style>
+</head>
+<body>
+  <section id="faculty">
+    <h2>Pengurus dan Kepala Sekolah</h2>
+    <p class="section-desc">
+      Tim guru profesional dengan dedikasi tinggi untuk memberikan pendidikan terbaik
+    </p>
+
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <div class="faculty-img">
+          <img src="" alt="HJ.Nur Sadiyah">
+        </div>
+        <div class="faculty-info">
+          <h3>HJ.Nur Sadiyah</h3>
+          <p>Pengasuh Pondok Pesantren Nurul Huda</p>
+        </div>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-img">
+          <img src="" alt="GUS MAHIN">
+        </div>
+        <div class="faculty-info">
+          <h3>GUS MAHIN</h3>
+          <p>Kepala BP3</p>
+        </div>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-img">
+          <img src="foto bu cicik.png" alt="Cicik Ivana S.E">
+        </div>
+        <div class="faculty-info">
+          <h3>Cicik Ivana S.E</h3>
+          <p>Kepala Sekolah SMA NURUL HUDA</p>
+        </div>
+      </div>
+
+      <div class="faculty-card">
+        <div class="faculty-img">
+          <img src="" alt="Khotibul Umam, S.Pd">
+        </div>
+        <div class="faculty-info">
+          <h3>Khotibul Umam, S.Pd</h3>
+          <p>Kepala Sekolah SMP NURUL HUDA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
